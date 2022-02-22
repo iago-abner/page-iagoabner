@@ -1,0 +1,12 @@
+* {
+  padding: 0;
+}
+
+li{
+  justify-content: flex-end;
+}
+
+main{
+  background: wheat;
+  text-align: center;
+}
