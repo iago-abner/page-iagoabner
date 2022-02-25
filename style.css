@@ -6,14 +6,9 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body{
-  background: url(images/macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg) no-repeat center center;
-  background-size: cover;
-  height: calc(100% - 79.4px); 
-}
-
 header{
   display: flex;
+  width: 100%;  
   justify-content: space-between;
   padding: 1rem 1.6rem 1rem 2rem;
   background-color: rgb(18, 0, 39);
@@ -24,14 +19,22 @@ h1{
   font-family: 'Permanent Marker', cursive;
 }
 
+.nav{
+  display: flex;
+  align-items: center;
+}
+
 header ul li a{
   text-decoration: none;
-  margin: 0 15px
 }
 
 header ul li a:hover{
   color:#ffacce;
   transition: 0.5s
+}
+
+header ul li{
+  padding: 12px;
 }
 
 ul{
@@ -41,29 +44,49 @@ ul{
   list-style: none;
 }
 
-#arrow-img{
-  width: 25px;
-  height: 20px;
-}
-
-.arrow{
-  margin: 1rem 0
+body{
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+  background: url(images/macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 .name{
-  margin: 2rem auto;
+  margin: 2rem  auto 0.4rem;
   font-size: 1.6rem;
 }
 
 .container{
+  margin: 0 auto;
   text-align: center;
 }
 
+.arrow{
+  font-size: 2.4rem;
+}
 
+.rotate{
+  transform: rotate(180deg);
+  transition: 0.8s;
+}
+
+#animation{
+  cursor: pointer;
+  color: #3d8bf1;
+}
 
 #about{
-  max-width: 50rem;
+  max-width: 60%;
   margin: 0 auto;
+}
+
+.any{
+  display: none;
+}
+
+.active{
+  display: block;
 }
 
 .form {
@@ -77,19 +100,15 @@ ul{
   padding: 0.2rem 0;
   border: none;
   border-radius: 0.2rem 0 0 0.2rem;
+  outline: none;
 }
 
 .container .name h1{
   font-size: 50px
 }
 
-.container .name h5{
-  font-size: 20px;
-}
-
-.nav{
-  display: flex;
-  align-items: center;
+.container .name h2{
+  font-size: 35px;
 }
 
 .btn-email{
@@ -102,9 +121,54 @@ ul{
   margin-left: -5px;
   width: 15%;
   padding: 0.2rem;
+  cursor: pointer;
 }
 
 .btn-email:hover{
   background-position: left bottom;
   transition: all 0.3s ease-in;
+}
+
+.slide-bottom {
+  display: block;
+  position: relative;
+  bottom: 40px;
+	-webkit-animation: slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;       
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container .name h2{
+    font-size: 25px
+  }
+
+  #about p{
+    align-items: justify;
+    margin: 0 auto;
+  }
+
+  .btn-email{
+    width: 35%;
+  }
 }
