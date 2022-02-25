@@ -3,16 +3,41 @@
   margin: 0;
   box-sizing: border-box;
   color: #fff8f8e1;
+  font-family: 'Poppins', sans-serif;
 }
 
-a{
+body{
+  background: url(images/macos-monterey-wwdc-21-stock-dark-mode-5k-6016x6016-5585.jpg) no-repeat center center;
+  background-size: cover;
+  height: calc(100% - 79.4px); 
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.6rem 1rem 2rem;
+  background-color: rgb(18, 0, 39);
+  box-shadow: 1px 1px 10px 1px rgb(232, 198, 255);
+}
+
+h1{
+  font-family: 'Permanent Marker', cursive;
+}
+
+header ul li a{
   text-decoration: none;
-  padding: 0 15px
+  margin: 0 15px
+}
+
+header ul li a:hover{
+  color:#ffacce;
+  transition: 0.5s
 }
 
 ul{
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   list-style: none;
 }
 
@@ -21,14 +46,65 @@ ul{
   height: 20px;
 }
 
-body{
-  background: linear-gradient(12deg, rgba(148,187,233,1) 4%, rgba(67,141,235,1) 38%, rgba(81,60,243,1) 66%, rgba(179,0,255,1) 91%) no-repeat;
-  background-size: auto 100vh;
+.arrow{
+  margin: 1rem 0
 }
-header{
+
+.name{
+  margin: 2rem auto;
+  font-size: 1.6rem;
+}
+
+.container{
+  text-align: center;
+}
+
+
+
+#about{
+  max-width: 50rem;
   margin: 0 auto;
 }
 
-main{
-  text-align: center;
+.form {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.form input{
+  width: 40%;
+  color: black;
+  padding: 0.2rem 0;
+  border: none;
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+
+.container .name h1{
+  font-size: 50px
+}
+
+.container .name h5{
+  font-size: 20px;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+}
+
+.btn-email{
+  background: linear-gradient(to right, #120027 50%, #3d8bf1 50%);
+  background-size: 200%;
+  background-position: right bottom;
+  border: none;
+  border-radius: 0 0.2rem 0.2rem 0;
+  font-weight: 900;
+  margin-left: -5px;
+  width: 15%;
+  padding: 0.2rem;
+}
+
+.btn-email:hover{
+  background-position: left bottom;
+  transition: all 0.3s ease-in;
 }
